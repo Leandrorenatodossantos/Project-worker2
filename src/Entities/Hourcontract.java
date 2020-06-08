@@ -1,0 +1,47 @@
+package Entities;
+
+import java.util.Date;
+
+public class Hourcontract {
+	private Date date;
+	private double valuePerhour;
+	private Integer hours;
+	
+	public Hourcontract() {
+	}
+
+	public Hourcontract(Date date, double valuePerhour, Integer hours) {
+		
+		this.date = date;
+		this.valuePerhour = valuePerhour;
+		this.hours = hours;
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+	public double getValuePerhour() {
+		return valuePerhour;
+	}
+
+	public void setValuePerhour(double valuePerhour) {
+		this.valuePerhour = valuePerhour;
+	}
+
+	public Integer getHours() {
+		return hours;
+	}
+
+	public void setHours(Integer hours) {
+		this.hours = hours;
+	}
+	
+	public double totalValue() {
+		return valuePerhour * hours;
+	}
+}
